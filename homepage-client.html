@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio của JANE NGUYEN, phát triển ứng dụng mobile và web.">
+    <title>JANE NGUYEN | Mobile & Web Developer</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <script src="portfolio.js" defer></script>
+</head>
+<body data-page="home">
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="brand" href="#home"><i class="fa-solid fa-code"></i> JANE NGUYEN</a>
+            <nav class="nav-links" aria-label="Điều hướng chính">
+                <a href="#home">Trang chủ</a><a href="#about">Giới thiệu</a><a href="#projects">Dự án</a><a href="#contact">Liên hệ</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="icon-btn" type="button" data-theme-toggle title="Đổi giao diện" aria-label="Đổi giao diện"><i class="fa-solid fa-moon"></i></button>
+                <a class="btn btn-primary" href="login-page.html"><i class="fa-solid fa-lock"></i> Admin</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="container hero" id="home">
+            <div>
+                <div class="eyebrow"><i class="fa-solid fa-code"></i> Mobile & Web Developer</div>
+                <h1><span id="heroName">JANE NGUYEN</span> <span class="accent">Xây dựng trải nghiệm số trên mobile và web</span></h1>
+                <p class="hero-copy" id="profileBio">Mình phát triển ứng dụng mobile với Flutter và xây dựng giao diện web responsive, từ website đến trang quản trị.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="#projects">Khám phá dự án <i class="fa-solid fa-arrow-right"></i></a>
+                    <a class="btn btn-outline" href="#contact">Liên hệ với mình</a>
+                </div>
+                <p class="muted"><strong id="profileName">JANE NGUYEN</strong> · <span id="profileTitle">Mobile & Web Developer · Flutter · HTML/CSS</span> · <span id="profileLocation">Hồ Chí Minh</span></p>
+            </div>
+            <div class="hero-portrait">
+                <div class="hero-image"><img src="https://avatars.githubusercontent.com/u/203385186?v=4" alt="Ảnh đại diện GitHub của JANE NGUYEN" onerror="this.src='https://placehold.co/700x875/1a181b/f4acb7?text=JANE+NGUYEN'"></div>
+                <p class="portrait-caption">Nguyễn Phạm Xuân Anh</p>
+            </div>
+        </section>
+        <section class="section about-band" id="about">
+            <div class="container">
+                <div class="section-heading"><h2>Mình làm gì</h2><p>Từ ứng dụng di động đến website và giao diện quản trị.</p></div>
+                <div class="skills-grid">
+                    <article class="skill"><i class="fa-solid fa-code"></i><h3>Flutter & Dart</h3><p>Phát triển ứng dụng di động đa nền tảng với Flutter và Dart.</p></article>
+                    <article class="skill"><i class="fa-solid fa-window-maximize"></i><h3>Web development</h3><p>Xây dựng giao diện website responsive và trang quản trị với HTML, CSS, JavaScript.</p></article>
+                    <article class="skill"><i class="fa-regular fa-calendar-check"></i><h3>Productivity apps</h3><p>Thiết kế luồng cho lịch, to-do, ghi chú và nhắc việc trong SuperCalendar.</p></article>
+                    <article class="skill"><i class="fa-solid fa-plug"></i><h3>API & Web Admin</h3><p>Khám phá tích hợp ứng dụng, API và hệ thống quản trị trong dự án Smart Heritage.</p></article>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-heading"><h2>Dự án trên GitHub</h2><p>Các dự án cá nhân và cộng tác đang được phát triển.</p></div>
+                <div class="projects-grid" id="publicProjectsGrid" aria-live="polite"></div>
+            </div>
+        </section>
+        <section class="section contact-band" id="contact">
+            <div class="container contact-row">
+                <div><h2>Kết nối với mình</h2><p>Xem các dự án và kết nối qua GitHub hoặc LinkedIn.</p></div>
+                <div class="contact-links">
+                    <a class="btn btn-outline" id="profileContact" href="https://github.com/XuanAnh1312" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                    <a class="btn btn-primary" id="profileLinkedIn" href="https://www.linkedin.com/in/jane-nguyenpham" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+                    <a class="btn btn-outline" id="profileWhatsApp" href="https://wa.me/84362600223" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    <a class="btn btn-outline" id="profileEmail" href="mailto:"><i class="fa-solid fa-envelope"></i> Email</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer><div class="container">JANE NGUYEN · Hồ Chí Minh · <a href="https://www.linkedin.com/in/jane-nguyenpham" target="_blank" rel="noopener noreferrer">LinkedIn</a></div></footer>
+</body>
+</html>
