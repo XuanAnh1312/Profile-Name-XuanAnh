@@ -1,5 +1,5 @@
 # 💫 About Me:
-🚀 Quick Overview<br>🔭 Working on: Building full-stack web applications and API services.<br>🌱 Learning: Spring Security, RESTful APIs, and React.js.<br>💬 Ask me about: Java OOP, SQL, Git & GitHub workflow.<br>⚡ Fun fact: Bugs are just uninvited features waiting to be fixed!
+🚀 Quick Overview<br>🔭 Working on: Building and learning full-stack web applications and API services.<br>🌱 Learning: Spring Security, RESTful APIs, and React.js.<br>💬 Ask me about: Java OOP, SQL, Git & GitHub workflow.<br>⚡ Fun fact: Bugs are just uninvited features waiting to be fixed!
 
 
 ## 🌐 Socials:

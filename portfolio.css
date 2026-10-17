@@ -132,7 +132,8 @@ th, td { padding: 13px 16px; border-bottom: 1px solid var(--border); vertical-al
 th { color: var(--muted); background: var(--surface); font-weight: 600; }
 .row-actions { display: flex; gap: 7px; }
 .row-actions .icon-btn { width: 34px; height: 34px; }
-.danger:hover { color: #ff6978; border-color: #ff6978; }
+.btn.danger, .icon-btn.danger { color: #ffb3bc; border-color: rgba(255, 105, 120, .45); background: rgba(255, 105, 120, .08); }
+.btn.danger:hover, .icon-btn.danger:hover { color: #ff6978; border-color: #ff6978; background: rgba(255, 105, 120, .14); }
 .panel-content { max-width: 700px; padding: 22px; }
 .panel-content h2 { margin: 0 0 20px; font-size: 1.3rem; }
 .modal { position: fixed; inset: 0; z-index: 20; display: none; place-items: center; padding: 18px; background: rgba(0, 0, 0, .72); }
@@ -141,8 +142,16 @@ th { color: var(--muted); background: var(--surface); font-weight: 600; }
 .modal-heading { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-bottom: 18px; }
 .modal-heading h2 { margin: 0; font-size: 1.3rem; }
 .modal-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
-.toast { position: fixed; right: 20px; bottom: 20px; z-index: 30; padding: 12px 16px; color: var(--text); background: var(--card); border: 1px solid var(--border); border-left: 4px solid var(--pink); border-radius: 8px; box-shadow: var(--shadow); }
-.empty-state { padding: 24px; color: var(--muted); text-align: center; }
+.toast {
+    position: fixed; right: 20px; bottom: 20px; z-index: 30;
+    min-width: 220px; max-width: 320px; padding: 12px 16px;
+    color: var(--text); background: var(--card); border: 1px solid var(--border);
+    border-left: 4px solid var(--pink); border-radius: 8px; box-shadow: var(--shadow);
+    opacity: 1; transform: translateY(0);
+}
+.empty-state td {
+    padding: 24px; color: var(--muted); text-align: center; background: rgba(128, 0, 32, .03);
+}
 
 @media (max-width: 800px) {
     .hero { min-height: auto; grid-template-columns: 1fr; gap: 36px; padding-block: 70px; text-align: center; }

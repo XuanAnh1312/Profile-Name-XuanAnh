@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quản trị | Portfolio</title>
+    <title>Admin | Portfolio</title>
     <link rel="stylesheet" href="portfolio.css">
     <script src="portfolio.js" defer></script>
 </head>
@@ -11,72 +11,75 @@
     <div class="admin-layout">
         <aside class="sidebar">
             <a class="brand" href="homepage-client.html"><i class="fa-solid fa-shield-halved"></i> Admin Panel</a>
-            <nav class="admin-nav" aria-label="Quản trị">
-                <button class="active" type="button" data-admin-tab="projects" data-title="Quản lý dự án"><i class="fa-solid fa-folder-open"></i> Quản lý dự án</button>
-                <button type="button" data-admin-tab="profile" data-title="Thông tin cá nhân"><i class="fa-solid fa-user-gear"></i> Thông tin cá nhân</button>
-                <button type="button" data-admin-tab="settings" data-title="Cài đặt hệ thống"><i class="fa-solid fa-gear"></i> Cài đặt</button>
+            <nav class="admin-nav" aria-label="Administration">
+                <button class="active" type="button" data-admin-tab="projects" data-title="Project Management"><i class="fa-solid fa-folder-open"></i> Project Management</button>
+                <button type="button" data-admin-tab="profile" data-title="Personal Information"><i class="fa-solid fa-user-gear"></i> Personal Information</button>
+                <button type="button" data-admin-tab="settings" data-title="System Settings"><i class="fa-solid fa-gear"></i> Settings</button>
             </nav>
-            <div class="sidebar-bottom"><button class="btn btn-outline" id="logoutButton" type="button"><i class="fa-solid fa-right-from-bracket"></i> Đăng xuất</button></div>
+            <div class="sidebar-bottom"><button class="btn btn-outline" id="logoutButton" type="button"><i class="fa-solid fa-right-from-bracket"></i> Log out</button></div>
         </aside>
         <main class="admin-main">
             <header class="admin-toolbar">
-                <div><h1 id="adminSectionTitle">Quản lý dự án</h1><p>Quản lý nội dung hiển thị trên portfolio</p></div>
+                <div><h1 id="adminSectionTitle">Project Management</h1><p>Manage the content displayed on the portfolio</p></div>
                 <div class="nav-actions">
-                    <button class="icon-btn" type="button" data-theme-toggle title="Đổi giao diện" aria-label="Đổi giao diện"><i class="fa-solid fa-moon"></i></button>
-                    <button class="btn btn-outline" id="homeButton" type="button"><i class="fa-solid fa-globe"></i> Xem portfolio</button>
+                    <button class="icon-btn" type="button" data-theme-toggle title="Toggle theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+                    <button class="btn btn-outline" id="homeButton" type="button"><i class="fa-solid fa-globe"></i> View portfolio</button>
                 </div>
             </header>
             <div class="admin-content">
                 <section data-admin-panel="projects">
                     <div class="stats-grid">
-                        <div class="stat"><span class="stat-label">Tổng dự án</span><strong class="stat-value" id="statTotalProjects">0</strong></div>
-                        <div class="stat"><span class="stat-label">Trạng thái</span><strong class="stat-value accent">Đang hoạt động</strong></div>
-                        <div class="stat"><span class="stat-label">Lưu trữ</span><strong class="stat-value">Trình duyệt</strong></div>
+                        <div class="stat"><span class="stat-label">Total Projects</span><strong class="stat-value" id="statTotalProjects">0</strong></div>
+                        <div class="stat"><span class="stat-label">Status</span><strong class="stat-value accent">Active</strong></div>
+                        <div class="stat"><span class="stat-label">Storage</span><strong class="stat-value">Browser</strong></div>
                     </div>
                     <section class="panel">
-                        <div class="panel-heading"><h2>Danh sách dự án</h2><button class="btn btn-primary" type="button" id="addProjectButton"><i class="fa-solid fa-plus"></i> Thêm dự án</button></div>
+                        <div class="panel-heading"><h2>Project List</h2><button class="btn btn-primary" type="button" id="addProjectButton"><i class="fa-solid fa-plus"></i> Add project</button></div>
                         <div class="table-wrap"><table>
-                            <thead><tr><th>Ảnh</th><th>Tên dự án</th><th>Mô tả</th><th>Công nghệ</th><th>Thao tác</th></tr></thead>
-                            <tbody id="adminProjectsTableBody"></tbody>
+                            <thead><tr><th>Image</th><th>Project Name</th><th>Description</th><th>Technology</th><th>Actions</th></tr></thead>
+                            <tbody id="adminProjectsTableBody">
+                                <tr class="empty-state"><td colspan="5">No projects yet. Click “Add project” to create one.</td></tr>
+                            </tbody>
                         </table></div>
                     </section>
                 </section>
                 <section data-admin-panel="profile" hidden>
                     <div class="panel panel-content">
-                        <h2>Cập nhật thông tin cá nhân</h2>
+                        <h2>Update personal information</h2>
                         <form id="profileForm">
-                            <div class="form-group"><label class="form-label" for="profileNameInput">Họ và tên</label><input class="form-control" id="profileNameInput" name="name" required></div>
-                            <div class="form-group"><label class="form-label" for="profileTitleInput">Chức danh</label><input class="form-control" id="profileTitleInput" name="title" required></div>
-                            <div class="form-group"><label class="form-label" for="profileBioInput">Giới thiệu ngắn</label><textarea class="form-control" id="profileBioInput" name="bio" rows="4" required></textarea></div>
-                            <div class="form-group"><label class="form-label" for="profileLocationInput">Khu vực</label><input class="form-control" id="profileLocationInput" name="location"></div>
-                            <div class="form-group"><label class="form-label" for="profileEmailInput">Email liên hệ (không bắt buộc)</label><input class="form-control" id="profileEmailInput" name="email" type="email"></div>
+                            <div class="form-group"><label class="form-label" for="profileNameInput">Full name</label><input class="form-control" id="profileNameInput" name="name" required></div>
+                            <div class="form-group"><label class="form-label" for="profileTitleInput">Title</label><input class="form-control" id="profileTitleInput" name="title" required></div>
+                            <div class="form-group"><label class="form-label" for="profileBioInput">Short bio</label><textarea class="form-control" id="profileBioInput" name="bio" rows="4" required></textarea></div>
+                            <div class="form-group"><label class="form-label" for="profileLocationInput">Location</label><input class="form-control" id="profileLocationInput" name="location"></div>
+                            <div class="form-group"><label class="form-label" for="profileEmailInput">Contact email (optional)</label><input class="form-control" id="profileEmailInput" name="email" type="email"></div>
                             <div class="form-group"><label class="form-label" for="profileGithubInput">GitHub</label><input class="form-control" id="profileGithubInput" name="github" type="url" required></div>
                             <div class="form-group"><label class="form-label" for="profileLinkedInInput">LinkedIn</label><input class="form-control" id="profileLinkedInInput" name="linkedin" type="url" required></div>
-                            <button class="btn btn-primary" type="submit">Lưu thay đổi</button>
+                            <button class="btn btn-primary" type="submit">Save changes</button>
                         </form>
                     </div>
                 </section>
                 <section data-admin-panel="settings" hidden>
                     <div class="panel panel-content">
-                        <h2>Cài đặt dữ liệu</h2>
-                        <p class="muted">Khôi phục danh sách dự án và thông tin cá nhân về dữ liệu mẫu.</p>
-                        <button class="btn btn-outline" type="button" id="resetDataButton">Khôi phục dữ liệu mẫu</button>
+                        <h2>Data settings</h2>
+                        <p class="muted">Restore the project list and personal information to the sample data.</p>
+                        <button class="btn btn-outline" type="button" id="resetDataButton">Restore sample data</button>
                     </div>
                 </section>
             </div>
         </main>
     </div>
+    <div class="toast" role="status" aria-live="polite">Changes saved successfully.</div>
     <div class="modal" id="projectModal" role="dialog" aria-modal="true" aria-labelledby="modalTitleText">
         <section class="modal-card">
-            <div class="modal-heading"><h2 id="modalTitleText">Thêm dự án mới</h2><button class="icon-btn" id="closeModalButton" type="button" aria-label="Đóng"><i class="fa-solid fa-xmark"></i></button></div>
+            <div class="modal-heading"><h2 id="modalTitleText">Add new project</h2><button class="icon-btn" id="closeModalButton" type="button" aria-label="Close"><i class="fa-solid fa-xmark"></i></button></div>
             <form id="projectForm">
                 <input type="hidden" id="projectId">
-                <div class="form-group"><label class="form-label" for="projectTitleInput">Tên dự án</label><input class="form-control" id="projectTitleInput" required></div>
-                <div class="form-group"><label class="form-label" for="projectImgInput">Link ảnh</label><input class="form-control" id="projectImgInput" type="url" placeholder="https://..." required></div>
-                <div class="form-group"><label class="form-label" for="projectDescInput">Mô tả ngắn</label><textarea class="form-control" id="projectDescInput" rows="3" required></textarea></div>
-                <div class="form-group"><label class="form-label" for="projectTagsInput">Công nghệ, phân cách bằng dấu phẩy</label><input class="form-control" id="projectTagsInput" placeholder="HTML, CSS, JavaScript" required></div>
-                <div class="form-group"><label class="form-label" for="projectLinkInput">Link demo hoặc GitHub</label><input class="form-control" id="projectLinkInput" type="url" placeholder="https://..." required></div>
-                <div class="modal-actions"><button class="btn btn-outline" id="cancelProjectButton" type="button">Hủy</button><button class="btn btn-primary" type="submit">Lưu dự án</button></div>
+                <div class="form-group"><label class="form-label" for="projectTitleInput">Project name</label><input class="form-control" id="projectTitleInput" required></div>
+                <div class="form-group"><label class="form-label" for="projectImgInput">Image link</label><input class="form-control" id="projectImgInput" type="url" placeholder="https://..." required></div>
+                <div class="form-group"><label class="form-label" for="projectDescInput">Short description</label><textarea class="form-control" id="projectDescInput" rows="3" required></textarea></div>
+                <div class="form-group"><label class="form-label" for="projectTagsInput">Technologies, separated by commas</label><input class="form-control" id="projectTagsInput" placeholder="HTML, CSS, JavaScript" required></div>
+                <div class="form-group"><label class="form-label" for="projectLinkInput">Demo or GitHub link</label><input class="form-control" id="projectLinkInput" type="url" placeholder="https://..." required></div>
+                <div class="modal-actions"><button class="btn btn-outline" id="cancelProjectButton" type="button">Cancel</button><button class="btn btn-primary" type="submit">Save project</button></div>
             </form>
         </section>
     </div>
